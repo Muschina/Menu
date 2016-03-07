@@ -1,0 +1,89 @@
+.carousel {
+    position: relative;
+    left: 0;
+    top: 40vw;
+    overflow: hidden;
+
+}
+
+.arrow{
+    position: absolute;
+    cursor: pointer;
+    top: 3.5vw;
+    width: 5vw;
+    height: 5vw;
+    padding: 0;
+    float: left;
+}
+
+.arrow.left{
+    left: 2vw;
+    background-image: url(../../Data/Icons/left_arrow.png);
+    background-size: cover;
+}
+
+.arrow.right{
+    right: 2vw;
+    background-image: url(../../Data/Icons/right_arrow.png);
+    background-size: cover;
+}
+
+.arrow.left:hover  {
+    background-image: url(../../Data/Icons/left_arrow_hover.png);
+}
+
+.arrow.right:hover  {
+    background-image: url(../../Data/Icons/right_arrow_hover.png);
+}
+
+.arrow.left:active  {
+    background-image: url(../../Data/Icons/left_arrow_active.png);
+}
+
+.arrow.right:active  {
+    background-image: url(../../Data/Icons/right_arrow_active.png);
+}
+
+.hide-img {
+    display: none;
+}
+
+#thumbs {
+    margin: 0;
+    width: 46.6vw;
+    padding: 0 0.5vw;
+    height: 11.6vw;
+    overflow: hidden;
+    border: solid 1px @border-color;
+    box-sizing: border-box;
+}
+
+.carusel-items-container {
+    .transition(margin-left, 1s);
+    margin: 0;
+    padding: 0;
+    width: 1999vw;
+    height: 11.6vw;
+    
+}
+
+.carusel-items {
+    list-style-type: none;
+}
+
+.carusel-items img {
+    border: solid 0.2vw @border-color;
+    height: 9vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    float: left;
+}
+
+.carusel-items img:hover {
+    cursor: pointer;
+    border: solid 0.2vw @background-color;
+}
+
+.click-img {
+    border: solid 0.2vw @background-color;
+}
