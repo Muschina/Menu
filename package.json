@@ -1,0 +1,26 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "\"Menu\" is a pet-project, that let you to show my skills.",
+  "main": "Prototype/index.html or ECMAScript 6/index.html",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "node-static": "^0.7.7",
+    "raw-loader": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muschina/Menu.git"
+  },
+  "author": "Pushchinskiy Maxim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muschina/Menu/issues"
+  },
+  "homepage": "https://github.com/Muschina/Menu#readme"
+}
