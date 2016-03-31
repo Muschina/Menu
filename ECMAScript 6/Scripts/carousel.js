@@ -1,11 +1,11 @@
 "use strict";
 
-class Carousel{
-    constructor(options){
+export default class Carousel {
+    constructor(options) {
         this._el = options.elem;
         this._items = options.items;
-        this._carouselTemplateFunction = _.template(options.carouselTemplate);
-        this._carouselItemsTemplateFunction = _.template(options.carouselItemsTemplate);
+        this._carouselTemplateFunction = require('./../../Templates/carousel-field.hbs');
+        this._carouselItemsTemplateFunction = require('./../../Templates/carousel-items.hbs');
         this._left = this._leftMoveImages.bind(this);
         this._right = this._rightMoveImages.bind(this);
         this._changeBorder = this._changeBorderSelectedImage.bind(this);
@@ -19,7 +19,7 @@ class Carousel{
         this._render();
     }
 
-    getElement(){
+    getElement() {
         return this._el;
     }
 
@@ -102,5 +102,6 @@ class Carousel{
         target.classList.add('click-img');
     }
 }
+
 
 

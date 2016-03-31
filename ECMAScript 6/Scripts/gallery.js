@@ -1,11 +1,10 @@
 "use strict";
 
-class Gallery{
+export default class Gallery{
     constructor(options) {
         this._el = options.elem;
         this._item = options.item;
-        this._galleryLargeImgTemplateFunction = _.template(options.galleryLargeImgTemplate);
-    }
+        this._galleryLargeImgTemplateFunction = require('./../../Templates/gallery.hbs');    }
 
     getElement() {
         return this._el;

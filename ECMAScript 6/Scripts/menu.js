@@ -1,10 +1,10 @@
 'use strict';
 
-class Menu{
+export default class Menu{
     constructor(options) {
         this._el = options.elem;
-        this._templateFunction = _.template(options.menuTemplate);
-        this._itemsTemplateFunction = _.template(options.menuItemsTemplate);
+        this._templateFunction = require('./../../Templates/menu-list.hbs');
+        this._itemsTemplateFunction = require('./../../Templates/menu-items.hbs');
         this._items = options.items;
 
         this._el.addEventListener('click', this._onItemClick.bind(this));

@@ -1,9 +1,9 @@
 'use strict';
 
-class Search{
+export default class Search{
     constructor(options) {
         this._el = options.elem;
-        this._el.innerHTML = _.template(options.searchTemplate)();
+        this._el.innerHTML = require('./../../Templates/search.hbs')({});
 
         this._el.addEventListener('input', this._onSearchInput.bind(this))
     }

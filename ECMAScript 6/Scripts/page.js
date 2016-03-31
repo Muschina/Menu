@@ -1,32 +1,31 @@
 'use strict';
 
-class Page{
+import Menu from './menu.js';
+import Search from './search.js';
+import Gallery from './gallery.js';
+import Carousel from './carousel.js';
+
+export default class Page{
     constructor(options) {
         this._el = options.elem;
 
         this._menu = new Menu({
             elem: document.querySelector('[data-component=menu]'),
-            items: options.menuItems,
-            menuTemplate: options.menuTemplate,
-            menuItemsTemplate: options.menuItemsTemplate
+            items: options.menuItems
         });
 
         this._search = new Search({
-            elem: document.querySelector('[data-component=search]'),
-            searchTemplate: options.searchTemplate
+            elem: document.querySelector('[data-component=search]')
         });
 
         this._gallery = new Gallery({
             elem: document.querySelector('[data-component=gallery]'),
-            item: null,
-            galleryLargeImgTemplate: options.galleryLargeImgTemplate,
+            item: null
         });
 
         this._carousel = new Carousel({
             elem: document.querySelector('[data-component=carousel]'),
-            items: null,
-            carouselTemplate: options.carouselTemplate,
-            carouselItemsTemplate: options.carouselItemsTemplate
+            items: null
         });
 
         this._search.getElement().addEventListener('search', this._onSearch.bind(this));
@@ -65,9 +64,9 @@ class Page{
 
     _onImageChange(event) {
     this._gallery.changePicture(event.detail.src, event.detail.alt);
-};
+    }
 
     _onArrowClick(event) {
     this._carousel.moveImages(event.detail);
-};
+    }
 }
